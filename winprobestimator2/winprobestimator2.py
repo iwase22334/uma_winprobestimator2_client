@@ -12,7 +12,7 @@ class WinProbEstimator2:
         query = json.dumps(dataset)
         r = requests.post(self.__server_url, query)
 
-        if r.status_code != 200 or r.status_code != 400:
+        if r.status_code != 200 and r.status_code != 400:
             body = json.loads(r.text)
             raise RuntimeError("TimeForecaster server says: %s" % (body["error"],))
 

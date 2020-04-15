@@ -1,1 +1,1 @@
-from timeforecaster.timeforecaster import *
+from winprobestimator2.winprobestimator2 import *
